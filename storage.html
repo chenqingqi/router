@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单页应用-本地存储</title>
+		<script src="libs/storage.js"></script>
+		
+		<script>
+		
+			/**
+			 * 写入本地永久存储
+			 */
+			storage.write('boy','{"name":"小明","age":"18"}')
+			
+			/**
+			 * 读取本地永久存储
+			 */
+			console.log(storage.read('boy'))
+			
+		</script>
+		
+	</head>
+</html>

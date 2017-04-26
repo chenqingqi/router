@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单页应用-路由功能</title>
+		<script src="libs/router.js"></script>
+	</head>
+	<body>
+		
+		<a href="router.html#index">名字</a>
+		<a href="router.html#login">登录</a>
+		<a href="router.html#about">关于</a>
+		
+		<script>
+			
+			/**
+			 * 定义路由表
+			 */
+			var hash  = {
+				
+				index:function()
+				{
+					console.log('跳转：首页')
+				},
+				
+				login:function()
+				{
+					console.log('跳转：登录')
+				},
+				
+				about:function()
+				{
+					console.log('跳转：关于')
+				}
+			}
+			
+			
+			/**
+			 * 侦听路由改变事件
+			 */
+			window.addEventListener('routerchange',function(e)
+			{
+				hash[e.data]()
+			})
+			
+			
+		</script>
+	</body>
+</html>
